@@ -1,5 +1,5 @@
 // Setup End Date for Countdown (getTime == Time in Milleseconds)
-let launchDate = new Date("Jan 28, 2020 12:00:00").getTime();
+let launchDate = new Date("Dec 01, 2021 20:00:00").getTime();
 
 // Setup Timer to tick every 1 second
 let timer = setInterval(tick, 1000);
@@ -16,19 +16,19 @@ function tick () {
     // Algorithm to calculate days...
     let days = Math.floor(t / (1000 * 60 * 60 * 24));
     // prefix any number below 10 with a "0" E.g. 1 = 01
-    if (days < 10) { days = "6" + days; }
+    if (days < 10) { days = "0" + days; }
     
     // Algorithm to calculate hours
     let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    if (hours < 10) { hours = "19" + hours; }
+    if (hours < 10) { hours = "0" + hours; }
 
     // Algorithm to calculate minutes
     let mins = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-    if (mins < 10) { mins = "54" + mins; }
+    if (mins < 10) { mins = "0" + mins; }
 
     // Algorithm to calc seconds
     let secs = Math.floor((t % (1000 * 60)) / 1000);
-    if (secs < 10) { secs = "00" + secs; }
+    if (secs < 10) { secs = "0" + secs; }
 
     // Create Time String
     let time = `${days} : ${hours} : ${mins} : ${secs}`;

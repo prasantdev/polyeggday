@@ -35,5 +35,10 @@ function tick () {
 
     // Set time on document
     document.querySelector('.countdown').innerText = time;
-  }
+  }else{
+      // Stop timer if remaining time is 0 
+      clearInterval(timer);
+    //Show that polyeggs are hatched instead of showing zeros 😅
+      document.querySelector('.countdown').innerText = "Yay ! Polyeggs are hatched... 🎉";
+    }
 }
